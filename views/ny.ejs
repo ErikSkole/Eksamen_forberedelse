@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ny bruker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Lag ny bruker</h1>
+    <a class="homebtn" href="/">Home</a>
+    <div class="containerForm">
+        <h2>Lag ny elev</h2>
+        <form method="POST" action="/ny/nyelev" class="form">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" name="fornavn">
+            <br>
+            <label for="etternavn">Etternavn</label>
+            <input type="text" name="etternavn">
+            <br>
+            <label for="epost">Epost</label>
+            <input type="mail" name="epost">
+            <br>
+            <label for="passord">Passord</label>
+            <input type="password" name="passord">
+            <br>
+            <select name="klasse">
+                <option value="1">VG1</option>
+                <option value="2">VG2</option>
+                <option value="3">VG3</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Lag elevbruker</button>
+        </form>
+    </div>
+    <div class="containerForm">
+        <h2>Lag ny Lærer</h2>
+        <form action="/ny/nylaerer" method="POST" class="form">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" name="fornavn">
+            <br>
+            <label for="etternavn">Etternavn</label>
+            <input type="text" name="etternavn">
+            <br>
+            <label for="epost">Epost</label>
+            <input type="mail" name="epost">
+            <br>
+            <label for="passord">Passord</label>
+            <input type="password" name="passord">
+            <br>
+            <select name="klasse" multiple>
+                <option value="1">VG1</option>
+                <option value="2">VG2</option>
+                <option value="3">VG3</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Lag elevbruker</button>
+        </form>
+    </div>
+</body>
+</html>

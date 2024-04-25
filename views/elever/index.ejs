@@ -1,0 +1,94 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!DOCTYPE html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elev oversikt</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Elev Oversikt</h1>
+    <a class="homebtn" href="/">Home</a>
+
+    <div class="megbtn">
+        <a href="/elever/meg/1">Din side</a>
+    </div>
+
+    <div class="vg1">
+        <h3>VG1:</h3>
+        <div class="container">
+            <div class="containerMini">
+                <h3>Elever:</h3>
+                <% locals.elever
+                    .filter(elev => elev.klasse.klassenavn === "VG1")
+                    .map(elev => { %>
+                    <ul>
+                        <p><%= elev.fornavn %> <%= elev.etternavn %> <%= elev.klasse.klassenavn %></p>
+                    </ul>
+                <% }) %>
+            </div>
+            <div class="containerMini">
+                <h3>Lærere:</h3>
+                <% 
+                locals.laerere
+                    .filter(laerer => laerer.klasse[0].klassenavn === "VG1")
+                    .map(laerer => { %>
+                    <ul>
+                        <p><%= laerer.fornavn %></p>
+                    </ul>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <div class="vg2">
+        <h3>VG2:</h3>
+        <div class="container">
+            <div class="containerMini">
+                <h3>Elever:</h3>
+                <% locals.elever
+                    .filter(elev => elev.klasse.klassenavn === "VG2")
+                    .map(elev => { %>
+                    <ul>
+                        <p><%= elev.fornavn %> <%= elev.etternavn %> <%= elev.klasse.klassenavn %></p>
+                    </ul>
+                <% }) %>
+            </div>
+            <div class="containerMini">
+                <h3>Lærere:</h3>
+                <% locals.laerere
+                    .filter(laerer => laerer.klasse[0].klassenavn === "VG2")
+                    .map(laerer => { %>
+                    <ul>
+                        <p><%= laerer.fornavn %></p>
+                    </ul>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+    <div class="vg3">
+        <h3>VG3:</h3>
+        <div class="container">
+            <div class="containerMini">
+                <h3>Elever:</h3>
+                <% locals.elever
+                    .filter(elev => elev.klasse.klassenavn === "VG3")
+                    .map(elev => { %>
+                    <ul>
+                        <p><%= elev.fornavn %> <%= elev.etternavn %> <%= elev.klasse.klassenavn %></p>
+                    </ul>
+                <% }) %>
+            </div>
+            <div class="containerMini">
+                <h3>Lærere:</h3>
+                <% locals.laerere
+                    .filter(laerer => laerer.klasse[0].klassenavn === "VG3")
+                    .map(laerer => { %>
+                    <ul>
+                        <p><%= laerer.fornavn %></p>
+                    </ul>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

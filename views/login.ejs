@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logg inn</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Logg inn</h1>
+    <% if(locals.error) {%>
+        <div class="alert"><%= locals.error %></div>
+    <% } %>
+    <form method="POST" action="/login" class="form">
+        <label for="epost">Epost</label>
+        <input type="mail" name="epost" value="<%= locals.epost %>"> 
+        <br>
+        <label for="passord">Passord</label>
+        <input type="password" name="passord" value="<%= locals.passord %>">
+        <br>
+        <br>
+        <button type="submit">Logg inn</button>
+    </form>
+</body>
+</html>
